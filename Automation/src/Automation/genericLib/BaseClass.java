@@ -34,9 +34,7 @@ driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	@BeforeMethod(alwaysRun=true)
 public void login() throws IOException
 {
-	driver.get(du.getDataFromProperties("url"));
-	LoginPage lp=new LoginPage(driver);
-	lp.loginApp(du.getDataFromProperties("username"),du.getDataFromProperties("password"));
+	
 }
 	@AfterMethod(alwaysRun=true)
 public void logout()
